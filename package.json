@@ -1,0 +1,14 @@
+{
+  "name": "logger",
+  "license": "BSD-3-Clause",
+  "version": "0.0.1",
+  "dependencies": {
+    "winston": "^2.4.0",
+    "winston-syslog": "^1.2.6"
+  },
+  "description": "logging library",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "repository": "https://github.com/faust64/logger"
+}
