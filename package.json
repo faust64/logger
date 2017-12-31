@@ -1,5 +1,5 @@
 {
-  "name": "logwrapper",
+  "name": "wraplog",
   "license": "BSD-3-Clause",
   "version": "0.0.1",
   "dependencies": {
