@@ -34,6 +34,8 @@ class myLogger {
 		logTransports.push(new winston.transports.Syslog(syslogOptions));
 	    }
 	    this._logger = new winston.Logger({ transports: logTransports });
+	    this._logger.on('error', (e) => { console.error('logger error:', JSON.stringify(e)); });
+	    this._logger.on('congestion', () => { console.warn('WARNING: logger congestion'); });
 	}
 
     get logger() {
