@@ -17,13 +17,16 @@ describe('test logger', () => {
 		    done()
 		} catch(e) { done(e); }
 	    });
-	it('logs to syslog', (done) => {
-		let log3 = require('../index.js')('test3', { syslog: true });
-		try {
-		    log3.info('can write info');
-		    log3.error('can write error');
-		    log3.debug('can write debug');
-		    done()
-		} catch(e) { done(e); }
-	    });
+
+	if (process.env.CIRCLE_BRANCH === undefined) {
+	    it('logs to syslog', (done) => {
+		    let log3 = require('../index.js')('test3', { syslog: true });
+		    try {
+			log3.info('can write info');
+			log3.error('can write error');
+			log3.debug('can write debug');
+			done()
+		    } catch(e) { done(e); }
+		});
+	}
     });
