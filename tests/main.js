@@ -18,7 +18,7 @@ describe('test logger', () => {
 		} catch(e) { done(e); }
 	    });
 	it('logs to syslog', (done) => {
-		let log3 = require('../index.js', { syslog: true })('test3');
+		let log3 = require('../index.js')('test3', { syslog: true });
 		try {
 		    log3.info('can write info');
 		    log3.error('can write error');
