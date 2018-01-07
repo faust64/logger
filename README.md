@@ -2,7 +2,21 @@
 
  * [![CircleCI](https://circleci.com/gh/faust64/logger.svg?style=svg)](https://circleci.com/gh/faust64/logger)
 
- * Install with: `npm install wraplog`
+ * Install with:
+
+```
+sudo npm install -g node-gyp
+npm install wraplog
+```
+
+Note `node-gyp` may be required running `npm running` during post install, as
+CircleCI did show errors such as `Module version mismatch. Expected 48, got 46.`
+suggesting `winston-syslog` library install pulled some node4-based binary.
+Failing to run post install won't block, yet may show an error on console.
+
+Eventually, we should bump `winston-syslog` to `^2.0.0`, although repository
+issues doesn't look encouraging, while upgrading would ultimately imply patching
+our code.
 
  * Configure using:
 

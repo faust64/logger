@@ -15,7 +15,8 @@
   },
   "repository": "https://github.com/faust64/logger",
   "scripts": {
-    "test": "make test",
-    "release": "npm login && git push -u origin master && npm publish"
+    "postinstall": "npm rebuild || true",
+    "release": "npm login && git push -u origin master && npm publish",
+    "test": "make test"
   }
 }
