@@ -9,7 +9,7 @@ sudo npm install -g node-gyp
 npm install wraplog
 ```
 
-Note `node-gyp` may be required running `npm running` during post install, as
+Note `node-gyp` may be required running `npm rebuild` during post install, as
 CircleCI did show errors such as `Module version mismatch. Expected 48, got 46.`
 suggesting `winston-syslog` library install pulled some node4-based binary.
 Failing to run post install won't block, yet may show an error on console.
