@@ -5,9 +5,9 @@ class myLogger {
 	    const logTransports = [];
 	    opts = opts || {};
 
-	    if (opts.syslog === undefined && (opts.ci !== undefined || process.env.CIRCLECI || process.env.CI || process.env.JENKINS)) {
+	    if (opts.ci !== undefined) {
 		logTransports.push(new winston.transports.File({ filename: './logs/' + role + '.log' }));
-	    } else if (opts.syslog === undefined && (opts.debug !== undefined || process.env.DEBUG)) {
+	    } else if (opts.debug !== undefined || process.env.DEBUG) {
 		logTransports.push(new winston.transports.Console({ colorize: true }));
 	    } else {
 		const syslogOptions = {
