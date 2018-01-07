@@ -45,7 +45,7 @@ prep-test:
 unit-test:
 	for _t in tests/*.js; \
 	    do \
-		./node_modules/.bin/mocha $$_t || exit 1; \
+		./node_modules/.bin/mocha --exit $$_t || exit 1; \
 	    done
 
 test: check-test prep-test unit-test clean-common
