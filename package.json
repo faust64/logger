@@ -3,8 +3,8 @@
   "license": "BSD-3-Clause",
   "version": "0.0.1",
   "dependencies": {
-    "winston": "^2.4.0",
-    "winston-syslog": "^1.2.6"
+    "winston": "^3.0.0-rc1",
+    "winston-syslog": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "4.1.0"
@@ -15,7 +15,6 @@
   },
   "repository": "https://github.com/faust64/logger",
   "scripts": {
-    "postinstall": "npm rebuild || true",
     "release": "npm login && git push -u origin master && npm publish",
     "test": "make test"
   }

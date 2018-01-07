@@ -31,11 +31,15 @@ class myLogger {
 		    syslogOptions.port = opts.port || process.env.SYSLOG_PORT || 514;
 		}
 		require('winston-syslog').Syslog;
-		logTransports.push(new winston.transports.Syslog(syslogOptions));
+		let prepTransport = new winston.transports.Syslog(syslogOptions);
+		prepTransport.handleExceptions = (e) => { console.error('logger caught error:', JSON.stringify(e)); };
+		logTransports.push(prepTransport);
 	    }
-	    this._logger = new winston.Logger({ transports: logTransports });
-	    this._logger.on('error', (e) => { console.error('logger error:', JSON.stringify(e)); });
-	    this._logger.on('congestion', () => { console.warn('WARNING: logger congestion'); });
+	    try {
+		this._logger = new winston.createLogger({ transports: logTransports });
+	    } catch(e) {
+		console.error('caught error initializing logger:', JSON.stringify(e));
+	    }
 	}
 
     get logger() {
