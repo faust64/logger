@@ -6,9 +6,16 @@
     "winston": "^2.4.0",
     "winston-syslog": "^1.2.6"
   },
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  },
   "description": "logging library",
   "engines": {
     "node": "6.9.1"
   },
-  "repository": "https://github.com/faust64/logger"
+  "repository": "https://github.com/faust64/logger",
+  "scripts": {
+    "test": "make test",
+    "release": "npm login && git push -u origin master && npm publish"
+  }
 }
