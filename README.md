@@ -1,6 +1,6 @@
 # Logger library - npmjs' wraplog
 
- * [![CircleCI](https://circleci.com/gh/faust64/logger.svg?style=svg)](https://circleci.com/gh/faust64/logger)
+ * Last tests against master on CircleCI: [![CircleCI](https://circleci.com/gh/faust64/logger.svg?style=svg)](https://circleci.com/gh/faust64/logger)
 
  * Install with:
 
