@@ -42,6 +42,9 @@ prep-test:
 	    mkdir ./logs; \
 	fi
 
+release:
+	@@npm run release
+
 unit-test:
 	for _t in tests/*.js; \
 	    do \
