@@ -9,7 +9,7 @@ class myLogger {
 		logTransports.push(new winston.transports.File({ filename: './logs/' + role + '.log' }));
 	    } else if (opts.debug !== undefined || process.env.DEBUG || process.env.LOG_TO_CONSOLE === 'color') {
 		logTransports.push(new winston.transports.Console({ colorize: true }));
-	    } else if (process.env.LOG_TO_CONSOLE) {
+	    } else if (opts.console !== undefined || process.env.LOG_TO_CONSOLE) {
 		logTransports.push(new winston.transports.Console({ colorize: false }));
 	    } else {
 		const syslogOptions = {
