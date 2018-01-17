@@ -1,7 +1,7 @@
 {
   "name": "wraplog",
   "license": "BSD-3-Clause",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "winston": "^3.0.0-rc1",
     "winston-syslog": "^2.0.0"
