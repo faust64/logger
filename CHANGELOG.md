@@ -1,3 +1,7 @@
+## v0.0.3 - 201801170936
+
+ - add option diverting logs to console, without setting debugs
+
 ## v0.0.2 - 201801071133
 
  - adding unit tests
