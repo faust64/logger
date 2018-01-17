@@ -1,5 +1,14 @@
 describe('test logger', () => {
-	it('logs to console', (done) => {
+	it('logs to console - native', (done) => {
+		let log1 = require('../index.js')('test1', { console: true });
+		try {
+		    log1.info('can write info');
+		    log1.error('can write error');
+		    log1.debug('can write debug');
+		    done()
+		} catch(e) { done(e); }
+	    });
+	it('logs to console - winston', (done) => {
 		let log1 = require('../index.js')('test1', { debug: true });
 		try {
 		    log1.info('can write info');
