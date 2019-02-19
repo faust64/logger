@@ -3,12 +3,12 @@
   "license": "BSD-3-Clause",
   "version": "0.0.5",
   "dependencies": {
-    "winston": "3.0.0-rc1",
+    "winston": "3.2.1",
     "winston-syslog": "^2.0.0",
     "winston-transport": "^4.1.0"
   },
   "devDependencies": {
-    "mocha": "5.2.0"
+    "mocha": "6.0.0"
   },
   "description": "logging library",
   "engines": {
