@@ -1,7 +1,7 @@
 {
   "name": "wraplog",
   "license": "BSD-3-Clause",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "winston": "^3.2.1",
     "winston-syslog": "git+https://github.com/faust64/winston-syslog.git",
