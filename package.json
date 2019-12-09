@@ -4,7 +4,7 @@
   "version": "0.0.6",
   "dependencies": {
     "winston": "3.2.1",
-    "winston-syslog": "^2.3.0",
+    "winston-syslog": "git+https://github.com/faust64/winston-syslog.git",
     "winston-transport": "^4.3.0"
   },
   "devDependencies": {
