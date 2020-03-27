@@ -4,15 +4,15 @@
   "version": "0.0.9",
   "dependencies": {
     "winston": "^3.2.1",
-    "winston-syslog": "git+https://github.com/faust64/winston-syslog.git",
+    "winston-syslog": "^2.4.4",
     "winston-transport": "^4.3.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "^7.1.1"
   },
   "description": "logging library",
   "engines": {
-    "node": "6.9.1"
+    "node": "10.17.0"
   },
   "repository": "https://github.com/faust64/logger",
   "scripts": {
